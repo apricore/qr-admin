@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Page Explorer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/dashicons.css">
+<link rel="stylesheet" href="css/qr-folder.css">
+<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="codemirror/theme/day-night.css">
+<link rel="stylesheet" href="codemirror/addon/dialog/dialog.css">
+<link rel="stylesheet" href="codemirror/addon/display/fullscreen.css">
+<link rel="stylesheet" href="codemirror/addon/fold/foldgutter.css">
+<link rel="stylesheet" href="codemirror/addon/scroll/simplescrollbars.css">
+<link rel="stylesheet" href="codemirror/addon/search/matchesonscrollbar.css">
+<script src="js/qr-folder.js"></script>
+<script src="js/index.js"></script>
+<script src="codemirror/lib/codemirror.js"></script>
+<script src="codemirror/addon/comment/comment.js"></script>
+<script src="codemirror/addon/comment/continuecomment.js"></script>
+<script src="codemirror/addon/dialog/dialog.js"></script>
+<script src="codemirror/addon/display/fullscreen.js"></script>
+<script src="codemirror/addon/edit/closebrackets.js"></script>
+<script src="codemirror/addon/edit/closetag.js"></script>
+<script src="codemirror/addon/edit/matchbrackets.js"></script>
+<script src="codemirror/addon/edit/matchtags.js"></script>
+<script src="codemirror/addon/fold/brace-fold.js"></script>
+<script src="codemirror/addon/fold/comment-fold.js"></script>
+<script src="codemirror/addon/fold/foldcode.js"></script>
+<script src="codemirror/addon/fold/foldgutter.js"></script>
+<script src="codemirror/addon/fold/indent-fold.js"></script>
+<script src="codemirror/addon/fold/markdown-fold.js"></script>
+<script src="codemirror/addon/fold/xml-fold.js"></script>
+<script src="codemirror/addon/mode/loadmode.js"></script>
+<script src="codemirror/addon/mode/overlay.js"></script>
+<script src="codemirror/addon/scroll/annotatescrollbar.js"></script>
+<script src="codemirror/addon/scroll/scrollpastend.js"></script>
+<script src="codemirror/addon/scroll/simplescrollbars.js"></script>
+<script src="codemirror/addon/search/jump-to-line.js"></script>
+<script src="codemirror/addon/search/match-highlighter.js"></script>
+<script src="codemirror/addon/search/matchesonscrollbar.js"></script>
+<script src="codemirror/addon/search/search.js"></script>
+<script src="codemirror/addon/search/searchcursor.js"></script>
+<script src="codemirror/addon/selection/active-line.js"></script>
+<script src="codemirror/addon/wrap/hardwrap.js"></script>
+<script src="codemirror/keymap/sublime.js"></script>
+<script src="codemirror/mode/clike/clike.js"></script>
+<script src="codemirror/mode/css/css.js"></script>
+<script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="codemirror/mode/javascript/javascript.js"></script>
+<script src="codemirror/mode/jsx/jsx.js"></script>
+<script src="codemirror/mode/markdown/markdown.js"></script>
+<script src="codemirror/mode/php/php.js"></script>
+<script src="codemirror/mode/python/python.js"></script>
+<script src="codemirror/mode/xml/xml.js"></script>
+<script src="codemirror/mode/meta.js"></script>
+</head>
+<body>
+<div id="navs">
+  <nav id="sideNav"><qr-folder id="rootFolder"></qr-folder><qr-resizerx></qr-resizerx></nav>
+  <nav id="topNav"><qr-page id="navBar"></qr-page><qr-sliderx></qr-sliderx></nav>
+</div>
+<div id="misc">
+  <div id="logo"><div id="logoIcon"></div><div id="title">Page Explorer</div></div>
+  <div id="statusBox"></div>
+  <div id="messageBox"></div>
+</div>
+<div id="content">
+  <div id="codeContainer">
+    <div id="panel">
+      <div id="preview"></div>
+      <div id="themeIcon"></div>
+      <div id="save"></div>
+      <div id="backward"></div>
+      <div id="forward"></div>
+      <div id="refresh"></div>
+    </div>
+    <div id="codeWrapper"></div>
+    <qr-resizerx><div></div></qr-resizerx>
+  </div>
+  <div id="frameContainer">
+    <div id="searchBar">
+      <div>
+        <input id="address" disabled>
+        <div id="lockIcon"></div>
+        <div id="openIcon"></div>
+      </div>
+    </div>
+    <div id="frameWrapper"></div>
+  </div>
+</div>
+<div id="overlay"></div>
+</body>
+</html>
