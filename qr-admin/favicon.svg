@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <style>
+    path { fill: hsl(210, 75%, 50%); }
+    @media (prefers-color-scheme: dark) {
+      path { fill: hsl(192, 80%, 75%); }
+    }
+  </style>
+  <path d="
+    M0 0 h4 v1 h-3 v3 h-1 z 
+    M16 0 v4 h-1 v-3 h-3 v-1 z
+    M16 16 h-4 v-1 h3 v-3 h1 z
+    M0 16 v-4 h1 v3 h3 v1 z
+    M3 3 v-1 h3 v1 h1 v3 h-1 v1 h1 v1 h-1 v-2 h-2 v-2 h1 v3 h1 v-4 z
+    v4 h2 v1 h-2 v-1 h-1 v-4 z
+    M14 2 v5 h-1 v-1 h-1 v1 h-2 v-1 h2 v-1 h-2 v-1 h2 v1 h1 v-2 h-4 v4 h-1 v-5 z
+    M14 14 h-1 v-1 h-1 v-1 h1 v-1 h1 z
+    m-3 0 v-1 h1 v1 z
+    m-2 0 v-1 h2 v-2 h2 v-2 h1 v1 h-2 v2 h-2 v2 z
+    m0 -2 v-1 h2 v-2 h2 v-1 h-1 v2 h-2 v2 z
+    m0 -2 v-1 h1 v-1 h1 v1 h1 v1 z
+    M2 14 v-5 h6 v5 h-5 v-1 h4 v-3 h-4 v4 z m2 -2 v-1 h2 v1 z
+  "/>
+</svg>
