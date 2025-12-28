@@ -549,9 +549,8 @@ document.addEventListener("DOMContentLoaded", () => {
           var frame = document.createElement("iframe");
           var closeButton = document.createElement("div");
           closeButton.style.cssText = "float:right; width: 20px; cursor: pointer;";
-          closeButton.innerText = "⇱";
+          closeButton.innerHTML = "&#x21F1;";
           frame.addEventListener("load", () => {
-            //frame.style.backgroundColor = "";
             var wd = frame.contentWindow;
             if (frame.src !== "about:blank") {
               wd.addEventListener("scroll", () => {
@@ -570,7 +569,6 @@ document.addEventListener("DOMContentLoaded", () => {
               wd.scrollTo(frame.xScroll, frame.yScroll);
             } else {
               var body = wd.document.body;
-              //body.style.backgroundColor = "hsl(0, 0%, 88%)";
               body.appendChild(closeButton);
               closeButton.onclick = () => {
                 frame.outerWindow.close();
@@ -579,7 +577,6 @@ document.addEventListener("DOMContentLoaded", () => {
               wd.addEventListener("unload", function () {
                 setTimeout(() => !frameWrapper.contains(frame) && !frame.outerWindow.closed && frame.outerWindow.close());
               });
-              //frame.outerWindow.location.replace(address.value);
               frame.outerWindow.location.reload();
             }
           });
@@ -598,8 +595,7 @@ document.addEventListener("DOMContentLoaded", () => {
               activeFrame.src = "about:blank";
             } else {
               activeFrame.outerWindow = null;
-              //activeFrame.style.backgroundColor = "hsl(0, 0%, 88%)";
-              activeFrame.src = address.value;
+              activeFrame.src = address.value + `?_=${Math.random()}`;
             }
           }
         };
@@ -613,7 +609,6 @@ document.addEventListener("DOMContentLoaded", () => {
             sessionStorage.setItem("locked-url", location);
           }
           if (!frame) return;
-          //frame.style.backgroundColor = "hsl(0, 0%, 88%)";
           if (frame === activeFrame) {
             var extention = qrFolder.getExtention(location);
             if (!extention || "zip,exe".indexOf(qrFolder.getExtention(location)) === -1) {
@@ -622,7 +617,7 @@ document.addEventListener("DOMContentLoaded", () => {
           } else if (lockIcon.locked && activeFrame) {
             frameWrapper.update();
           }
-        }
+        };
     var openFrame = (page, passive) => {
           if (!page) {
             frameWrapper.innerHTML = "";
@@ -649,7 +644,7 @@ document.addEventListener("DOMContentLoaded", () => {
               if (!frameWrapper.contains(frame)) {
                 updateFrame(page);
                 frameWrapper.append(frame);
-                if (frame.src === "about:blank") frame.src = location;
+                if (frame.src === "about:blank") frame.src = location + `?_=${Math.random()}`;
               }
               if (!frame.src) {
                 updateFrame(page);
@@ -670,7 +665,7 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             }
           }
-        }
+        };
     var closeFrame = (page, toDelet) => {
           var frame = frameGallery.get(page);
           if (frame) {
@@ -685,7 +680,7 @@ document.addEventListener("DOMContentLoaded", () => {
             frameWrapper.innerHTML = "";
             address.value = "";
           }
-        }
+        };
     navBar.addEventListener("pageUpdate", event => {
       if (!preview.on) return;
       var page = event.detail;

@@ -8,7 +8,7 @@ A lightweight **Web-based Code Editor** built on **CodeMirror 5**, designed to r
 
 **License:** [MIT](qr-admin/LICENSE)
 
-**Try me here:** [https://qr-admin.azurewebsites.net/qr-admin/](https://qr-admin.azurewebsites.net/qr-admin/)
+**Try me here:** [https://qr.unaux.com/qr-admin/](https://qr.unaux.com/qr-admin/)
 
 ---
 
