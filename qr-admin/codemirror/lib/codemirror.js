@@ -3766,7 +3766,7 @@
     var d = cm.display;
     var sizes = d.scrollbars.update(measure);
 
-    d.sizer.style.paddingRight = (d.barWidth = sizes.right + 1 || 8) + "px"; // original: d.sizer.style.paddingRight = (d.barWidth = sizes.right) + "px";
+    d.sizer.style.paddingRight = (d.barWidth = 7) + "px"; // original: d.sizer.style.paddingRight = (d.barWidth = sizes.right) + "px";
     d.sizer.style.paddingBottom = (d.barHeight = sizes.bottom) + "px";
     d.heightForcer.style.borderBottom = sizes.bottom + "px solid transparent";
 
