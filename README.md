@@ -8,8 +8,6 @@ A lightweight **Web-based Code Editor** built on **CodeMirror 5**, designed to r
 
 **License:** [MIT](LICENSE)
 
-**Try me here:** [https://qr.unaux.com/qr-admin/](https://qr.unaux.com/qr-admin/)
-
 ---
 
 ## 🖼️ Screenshots
