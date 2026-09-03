@@ -574,7 +574,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 frame.outerWindow.close();
                 frameWrapper.update();
               };
-              wd.addEventListener("unload", function () {
+              wd.addEventListener("pagehide", function () {
                 setTimeout(() => !frameWrapper.contains(frame) && !frame.outerWindow.closed && frame.outerWindow.close());
               });
               frame.outerWindow.location.reload();
@@ -728,7 +728,7 @@ document.addEventListener("DOMContentLoaded", () => {
     preview.addEventListener("previewoff", () => {
       activeFrame = null;
     });
-    window.addEventListener("unload", () => {
+    window.addEventListener("pagehide", () => {
       navBar.getPages().forEach(page => {
         var outerWindow;
         if (outerWindow = frameGallery.get(page)?.outerWindow) outerWindow.close();
