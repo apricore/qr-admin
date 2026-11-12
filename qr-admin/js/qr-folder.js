@@ -1185,11 +1185,11 @@ class qrFolder extends HTMLElement {
         folderElem.head.classList.remove("selected");
         var children = folderElem.body.children;
         for (let i = 0; i < children.length; i++) {
-          var child = children[i];
+          var child = children[i], next_level = level + 1;
 
           if (children[i].tagName === "QR-FOLDER") {
             if (level > location.split("/").length - 1) return;
-            updateFolder(child, child.src.replace(oldSrc, location), ++level);
+            updateFolder(child, child.src.replace(oldSrc, location), next_level);
           } else
             updateFile(child, child.getAttribute("href").replace(oldSrc, location));
         }
